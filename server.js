@@ -77,6 +77,7 @@ app.post('/video', upload.single('file'), (req, res) => {
         id: Date.now(),
         title: req.body.title,
         filePath: req.file.filename,
+        fileSize: req.file.size
     };
 
     videos.push(newVideo);
